@@ -1,0 +1,6 @@
+yolo detect train data=data.yaml imgsz=640 project=runs/train name='exp' epochs=10 batch=8 optimizer='Adam' model=std_weights/yolov8s.pt device=cpu
+
+yolo detect predict save=True project=runs/predict name='best' model=weights/best.pt source=datasets/test/images/*
+
+
+yolo detect predict save=True project=runs/predict name='yolov8n' model=std_weights/yolov8n.pt source=datasets/test/images/*
